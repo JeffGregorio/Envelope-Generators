@@ -16,9 +16,9 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#include "ADSR.h"
+#include "ADSR_LogExp.h"
 
-ADSR::ADSR(int atk_len, int dec_len, float sus_level, int rel_len, float eps) {
+ADSR_LogExp::ADSR_LogExp(int atk_len, int dec_len, float sus_level, int rel_len, float eps) {
     v_sus = sus_level;
     begin_idle();
     set_attack(eps, atk_len);
@@ -28,6 +28,6 @@ ADSR::ADSR(int atk_len, int dec_len, float sus_level, int rel_len, float eps) {
     retrigger = false;
 }
 
-ADSR::~ADSR(void) {
+ADSR_LogExp::~ADSR_LogExp(void) {
   
 }
